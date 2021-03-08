@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">limsa</string>
+    <string-array name="spinneri">
+        <item>0.5l</item>
+        <item>1.5l</item>
+    </string-array>
+
+</resources>

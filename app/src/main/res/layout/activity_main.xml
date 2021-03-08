@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/tausta"
+        android:layout_width="421dp"
+        android:layout_height="802dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507"
+        app:srcCompat="@drawable/limua" />
+
+    <Spinner
+        android:id="@+id/spinneri"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:entries="@array/spinneri"
+        android:scrollbarSize="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/tekstiruutu"
+        android:layout_width="261dp"
+        android:layout_height="157dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/kuittinappi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381"
+        app:srcCompat="@android:drawable/progress_horizontal" />
+
+    <SeekBar
+        android:id="@+id/sb_seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="231dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="276dp"
+        android:max="5"
+        android:progress="0"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <ImageView
+        android:id="@+id/balance"
+        android:layout_width="106dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031"
+        app:srcCompat="@android:drawable/progress_horizontal" />
+
+    <TextView
+        android:id="@+id/balancetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Balance:"
+        android:textColor="#09F813"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/balance"
+        app:layout_constraintEnd_toEndOf="@+id/balance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/balance"
+        app:layout_constraintTop_toTopOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/balanssi"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:text="   0€"
+        android:textColor="#00E308"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/balance"
+        app:layout_constraintEnd_toEndOf="@+id/balance"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/balance"
+        app:layout_constraintTop_toTopOf="@+id/balance"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/teksti"
+        android:layout_width="251dp"
+        android:layout_height="138dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="\n\n     Add money first."
+        android:textColor="#03FF0D"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tekstiruutu"
+        app:layout_constraintStart_toStartOf="@+id/tekstiruutu"
+        app:layout_constraintTop_toTopOf="@+id/tekstiruutu"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <TextView
+        android:id="@+id/rahanlisays"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
+        android:text="+0€"
+        android:textColor="#FFEB3B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/addnappi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toEndOf="@+id/balance"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <Button
+        android:id="@+id/pepsinappi"
+        android:layout_width="98dp"
+        android:layout_height="160dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00974545"
+        android:backgroundTintMode="screen"
+        android:onClick="setPepsi"
+        android:shadowColor="#C53C3C"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorHint="#00FFFFFF"
+        android:textColorLink="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71"
+        app:rippleColor="#731414"
+        app:strokeColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/kokisnappi"
+        android:layout_width="98dp"
+        android:layout_height="160dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00974545"
+        android:backgroundTintMode="screen"
+        android:onClick="setCoke"
+        android:shadowColor="#C53C3C"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorHint="#00FFFFFF"
+        android:textColorLink="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71"
+        app:rippleColor="#731414"
+        app:strokeColor="#00FFFFFF" />
+
+    <Button
+        android:id="@+id/fantanappi"
+        android:layout_width="98dp"
+        android:layout_height="160dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00974545"
+        android:backgroundTintMode="screen"
+        android:onClick="setFanta"
+        android:shadowColor="#C53C3C"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorHint="#00FFFFFF"
+        android:textColorLink="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71"
+        app:rippleColor="#731414"
+        app:strokeColor="#00FFFFFF" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="144dp"
+        android:layout_height="145dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tausta"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027"
+        app:srcCompat="@drawable/perspective_button_stop_icon" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="141dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Pick size:"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/buybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="buyBottle"
+        android:text="BUY"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="316dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kokisnappi"
+        app:layout_constraintVertical_bias="0.608" />
+
+    <ImageButton
+        android:id="@+id/kuittinappi"
+        android:layout_width="111dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="receipt"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416"
+        app:srcCompat="@drawable/yellow_glossy_button_md" />
+
+    <ImageButton
+        android:id="@+id/rahatulosnappi"
+        android:layout_width="114dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="96dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="returnMoney"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/addnappi"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/red_button" />
+
+    <ImageButton
+        android:id="@+id/addnappi"
+        android:layout_width="98dp"
+        android:layout_height="83dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="addMoney"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance"
+        app:layout_constraintVertical_bias="0.007"
+        app:srcCompat="@drawable/green_glossy_button_hi" />
+
+    <TextView
+        android:id="@+id/kuittiteksti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receipt"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/kuittinappi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/kuittinappi"
+        app:layout_constraintTop_toTopOf="@+id/kuittinappi" />
+
+    <TextView
+        android:id="@+id/Addteksti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/addnappi"
+        app:layout_constraintEnd_toEndOf="@+id/addnappi"
+        app:layout_constraintStart_toEndOf="@+id/rahatulosnappi"
+        app:layout_constraintTop_toTopOf="@+id/addnappi" />
+
+    <TextView
+        android:id="@+id/returnteksti"
+        android:layout_width="62dp"
+        android:layout_height="23dp"
+        android:text="Return"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rahatulosnappi"
+        app:layout_constraintEnd_toEndOf="@+id/rahatulosnappi"
+        app:layout_constraintStart_toStartOf="@+id/rahatulosnappi"
+        app:layout_constraintTop_toTopOf="@+id/rahatulosnappi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
